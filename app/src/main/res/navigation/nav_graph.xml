@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.datalife.compyutersavvy.presentation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_lessonsFragment"
+            app:destination="@id/lessonsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lessonsFragment"
+        android:name="uz.datalife.compyutersavvy.presentation.LessonsFragment"
+        android:label="fragment_lessons"
+        tools:layout="@layout/fragment_lessons" >
+        <argument
+            android:name="language"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_lessonsFragment_to_chooseFragment2"
+            app:destination="@id/chooseFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/classesFragment"
+        android:name="uz.datalife.compyutersavvy.presentation.ClassesFragment"
+        android:label="fragment_classes"
+        tools:layout="@layout/fragment_classes" >
+        <argument
+            android:name="clazzId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_classesFragment_to_lectureFragment"
+            app:destination="@id/lectureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lectureFragment"
+        android:name="uz.datalife.compyutersavvy.presentation.LectureFragment"
+        android:label="fragment_lecture"
+        tools:layout="@layout/fragment_lecture" >
+        <argument
+            android:name="lecture"
+            app:argType="uz.datalife.compyutersavvy.data.Lecture" />
+    </fragment>
+    <fragment
+        android:id="@+id/chooseFragment2"
+        android:name="uz.datalife.compyutersavvy.presentation.ChooseFragment"
+        android:label="fragment_choose"
+        tools:layout="@layout/fragment_choose" >
+        <action
+            android:id="@+id/action_chooseFragment2_to_classesFragment"
+            app:destination="@id/classesFragment" />
+        <argument
+            android:name="clazzId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_chooseFragment2_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="uz.datalife.compyutersavvy.presentation.FragmentGame"
+        android:label="FragmentGame" >
+        <action
+            android:id="@+id/action_fragmentGame_to_fragmentResult"
+            app:destination="@id/fragmentResult" />
+        <argument
+            android:name="clazz"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentResult"
+        android:name="uz.datalife.compyutersavvy.presentation.FragmentResult"
+        android:label="FragmentResult" >
+        <argument
+            android:name="count"
+            app:argType="integer" />
+        <argument android:name="correctAnswer"
+            app:argType="integer" />
+    </fragment>
+</navigation>

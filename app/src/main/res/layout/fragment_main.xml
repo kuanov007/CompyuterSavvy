@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_contrast">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <ImageView
+        android:id="@+id/btn_about"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_about"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@id/out_logo"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/out_logo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="60dp"
+        android:outlineAmbientShadowColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/selectedRussian"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/app_name">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo001" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectedRussian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#049DD9"
+        android:text="Russian"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/selectedUzbek"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/out_logo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectedUzbek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#049DD9"
+        android:text="Uzbek"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/selectedKarakalpak"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/selectedRussian" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectedKarakalpak"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="#049DD9"
+        android:text="Karakalpak"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/left"
+        app:layout_constraintRight_toRightOf="@id/right"
+        app:layout_constraintTop_toBottomOf="@id/selectedUzbek" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

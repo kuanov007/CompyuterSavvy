@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CompyuterSavvy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sinf">%1$s-sinf</string>
+    <string name="favorite">sevimli</string>
+    <string name="classes">Sinflar</string>
+    <string name="contents">Mundarija</string>
+    <string name="lecture">Ma\'ruza</string>
+    <string name="question_counter">%d / %d</string>
+    <string name="score_text">Your Score: %d/15</string>
+    <string name="submit">Submit</string>
+    <string name="finish_text">Finish</string>
+    <string name="continue_text">Continue</string>
+    <string name="result_text"><b>%s</b> Siz <b>%d</b> sorawdan <b>%d</b> sorawına durıs juwap bere aldınız!</string>
+    <string name="siz_sorawdan_soraw_na_dur_s_juwap_bere_ald_n_z">Siz %1$s sorawdan %2$s sorawına durıs juwap bere aldınız!</string>
+</resources>
